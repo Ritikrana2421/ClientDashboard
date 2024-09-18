@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Job Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            background-color: #00447c;
+            color: white;
+            padding: 20px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        input{
+            padding: 10px;
+            border: 1px solid transparent;
+        }
+        th {
+            background-color: #00447c;
+            color: white;
+            text-align: left;
+            width: 30%;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #00447c;
+            align-items: center;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        .action-buttons {
+            margin-top: 20px;
+        }
+        .action-buttons a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VIEW JOB SHEET</h1>
+        <table>
+            <tr>
+                <th>Client Name:</th>
+                <td><input type="text" placeholder="Enter Your Name"></td>
+            </tr>
+            <tr>
+                <th>Contact Info:</th>
+                <td><input type="number" placeholder="Enter Your contact-info"></td>
+            </tr>
+            <tr>
+                <th>Received Date:</th>
+                <td><input type="date" value="date" ></td>
+            </tr>
+            <tr>
+                <th>Inventory Received:</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Inventory Image/Document/Video:</th>
+                <td><a href="#" class="button">View File</a></td>
+            </tr>
+            <tr>
+                <th>Reported Issues:</th>
+                <td><input type="text" placeholder="Report Your Issues Here"></td>
+            </tr>
+            <tr>
+                <th>Client Notes:</th>
+                <td><input type="text" placeholder="Enter your Notes Here"></td>
+            </tr>
+            <tr>
+                <th>Assigned Technician:</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Estimated Amount:</th>
+                <td><input type="number" placeholder="Enter Amount"></td>
+            </tr>
+            <tr>
+                <th>Deadline:</th>
+                <td><input type="date" value="date" ></td>
+            </tr>
+            <tr>
+                <th>Status:</th>
+                <td><input type="text" placeholder="Status"></td>
+            </tr>
+        </table>
+
+        <h3>Add or Update Note:</h3>
+        <textarea id="noteInput" rows="4" placeholder="Enter your Updated Notes"></textarea>
+        <button onclick="saveNote()" class="button">Save Note</button>
+
+        <div class="action-buttons">
+            <a href="#" class="button">Edit</a>
+            <a href="#" class="button">Delete</a>
+            <a href="Assignment1.html" class="button" target="_self">Back</a>
+
+        </div>
+
+        <button onclick="savePDF()" class="button" style="margin-top: 20px;">Save as PDF</button>
+    </div>
+
+    <script>
+        function saveNote() {
+            const note = document.getElementById('noteInput').value;
+            alert('Note saved: ' + note);
+        }
+
+        function savePDF() {
+            alert('Saving as PDF...');
+        }
+    </script>
+</body>
+</html>

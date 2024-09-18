@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Job Sheet</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    background-color: #00447c;
+            color: white;
+            padding: 20px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            font-size: 24px;
+}
+
+form.job-sheet {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+button[type="reset"]:hover {
+    background-color: #c9302c;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>EDIT JOB SHEET</h1>
+
+            <form class="job-sheet">
+            <label for="client-name">Client Name:</label>
+            <input type="text" id="client-name" name="client-name" value="randeep goswami">
+
+            <label for="contact-info">Contact Info:</label>
+            <input type="text" id="contact-info" name="contact-info" value="1234567890">
+
+            <label for="received-date">Received Date:</label>
+            <input type="date" id="received-date" name="received-date" value="2014-05-05">
+
+            <label for="inventory-received">Inventory Received:</label>
+            <input type="text" id="inventory-received" name="inventory-received" value="none">
+
+            <label for="inventory-images">Inventory Image/Document/Video:</label>
+            <input type="text" id="inventory-images" name="inventory-images" value="None">
+
+            <label for="reported-issues">Reported Issues:</label>
+            <input type="text" id="reported-issues" name="reported-issues" value="hp">
+
+            <label for="client-notes">Client Notes:</label>
+            <input type="text" id="client-notes" name="client-notes" value="f">
+        </form>
+
+        <form class="job-sheet">
+            <label for="assigned-technician">Assigned Technician:</label>
+            <input type="text" id="assigned-technician" name="assigned-technician" value="f">
+
+            <label for="estimated-amount">Estimated Amount:</label>
+            <input type="text" id="estimated-amount" name="estimated-amount" value="">
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" value="2014-06-10">
+
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+
+            <div class="buttons">
+                <button type="button" onclick="saveChanges()">Save Changes</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function saveChanges() {
+    alert("Changes have been saved!");
+}
+
+    </script>
+</body>
+</html>
